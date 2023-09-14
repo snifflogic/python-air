@@ -14,8 +14,8 @@ To use in your own project, copy `air.py` and `datapoint.py` into your project f
 - `example.py` - a script demonstrating how to use the Air and DataPoint classes
 
 # Packages
-[`bleak`](https://bleak.readthedocs.io/en/latest/) - for communicating with BLE device
-[`rich`](https://rich.readthedocs.io/en/stable/introduction.html) -  for pretty printing. It can be omitted (simply remove the import statement if omitting).
+- [`bleak`](https://bleak.readthedocs.io/en/latest/) - for communicating with BLE device  
+- [`rich`](https://rich.readthedocs.io/en/stable/introduction.html) -  for pretty printing. It can be omitted (simply remove the import statement if omitting).
 
 # Bugs
 If you've encountered a bug, please open an issue. Include details about your device, operating system, Python version, and Bluetooth version on your computer. Don't forget to attach your code.
