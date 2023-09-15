@@ -83,7 +83,7 @@ class Air:
           """
           if not newName.startswith("Air"):
                raise Exception ("Name of Air device must start with 'Air' for compatibility reasons")
-          if not newName.count <= 8:
+          if not len(newName) <= 8:
                raise Exception ("Length of new name must be less than or equal to 8")
 
           await self.client.write_gatt_char(NAME_UUID,newName.encode(), response=True)

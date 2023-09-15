@@ -53,11 +53,27 @@ async def main():
     while (command == 0 ):
         i = 1 # list index
         print("Scanning for devices...")
-        devices = await BleakScanner.discover()
+        all_devices = await BleakScanner.discover(timeout=8)
         print("Device list: ")
-        for device in devices:
+        is_ble_working = False
+        there_is_air = False
+        devices = []
+        for device in all_devices:
+            is_ble_working = True
+            from rich import inspect
+            if not device.name.startswith("Air"):
+                continue
+            devices.append(device)
+            there_is_air =True
             print(f" {i} {device}")
             i = i+1
+        if i==1:
+            if (is_ble_working and not there_is_air):
+                note = "make sure to turn on your air"
+            else:
+                note = "make sure the ble is working and the device is turned on"
+            print(f"no device found.{note}. exiting")
+            exit(1)
         print("Enter number to connect to device, 0 to retry, 99 to quit")
         input_str = input()
         try:
@@ -67,6 +83,9 @@ async def main():
         if (command == 99):
             exit()
         if (command != 0):
+            if len(devices)<command:
+                print("number too large.")
+                exit(1)
             address = devices[command-1]
     print(f"Connecting to: {address}...")
     # connect to chosen device
