@@ -4,10 +4,12 @@ from bleak import BleakScanner, BleakGATTCharacteristic
 # printing time
 import time
 #pretty printing
-from rich import print
+try:
+    from rich import print
+except ModuleNotFoundError:
+    pass
 # model
-from air import Air
-from datapoint import DataPoint
+from snifflogic_air import Air,DataPoint
 
 ## variables
 # input from user
@@ -60,7 +62,6 @@ async def main():
         devices = []
         for device in all_devices:
             is_ble_working = True
-            from rich import inspect
             if not device.name.startswith("Air"):
                 continue
             devices.append(device)
