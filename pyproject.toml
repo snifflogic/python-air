@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0","bleak","rich"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "snifflogic_air"
+version = "0.0.1"
+authors = [
+  { name="snifflogic", email="support@snifflogic.com" },
+]
+description = "Python SDK for communicating with the Sniff Controller Air of Sniff Logic"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+        "Programming Language :: Python :: 3",
+        "OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/snifflogic/python-air/issues"
