@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-setup.py
-snifflogic_air/snifflogic_air.egg-info/PKG-INFO
-snifflogic_air/snifflogic_air.egg-info/SOURCES.txt
-snifflogic_air/snifflogic_air.egg-info/dependency_links.txt
-snifflogic_air/snifflogic_air.egg-info/top_level.txt

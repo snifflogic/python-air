@@ -9,7 +9,7 @@ try:
 except ModuleNotFoundError:
     pass
 # model
-from snifflogic_air import Air,DataPoint
+from . import Air,DataPoint
 
 ## variables
 # input from user
@@ -62,6 +62,8 @@ async def main():
         devices = []
         for device in all_devices:
             is_ble_working = True
+            if not device.name:
+                continue
             if not device.name.startswith("Air"):
                 continue
             devices.append(device)
