@@ -1,4 +1,4 @@
-# python-air
+# python-air (snifflogic-air package)
 
 Python SDK for communicating with the Sniff Controller Air of Sniff Logic
 
@@ -6,21 +6,20 @@ Python SDK for communicating with the Sniff Controller Air of Sniff Logic
 
 Install the module using `pip`
 
-```
+```bash
 pip install git+https://github.com/snifflogic/python-air
 ```
 
 to run the example, run
 
-```
+```bash
 python -m snifflogic_air.example
 ```
 
 To use in your own project,
 
-```
+```python
 from snifflogic_air import *
-
 ```
 
 And then you can use `Air` and `DataPoint` as shown in `example.py`
