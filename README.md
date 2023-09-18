@@ -22,7 +22,7 @@ To use in your own project,
 from snifflogic_air import *
 ```
 
-And then you can use `Air` and `DataPoint` as shown in `example.py`
+And then you can use `Air` and `DataPoint` as shown in [`example.py`](https://github.com/snifflogic/python-air/blob/master/src/snifflogic_air/example.py)
 
 ## Example script
 
